@@ -35,7 +35,7 @@ header,footer{
     padding-top: 10px;
 }
 
-#hobby,#ranking{
+#hobby,#ranking,#dog{
     background-color: #fff;
     max-width: 1000px;
     border-radius: 10px;
@@ -108,6 +108,41 @@ header li{
     border:rgb(193, 134, 32) 5px dotted;
 }
 
+/* dog */
+
+#dog{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border:rgb(168, 61, 35) 5px dotted;
+}
+
+.contents {
+    text-align: center;
+    line-height: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition-duration: 0.4s;
+  }
+  
+  .contents.is-open {
+    border: 1px solid rgb(159, 159, 154);
+    background-color: rgb(230, 212, 212);
+    padding: 10px;
+    line-height: normal;
+    height: auto;
+    opacity: 1;
+  }
+
+  .menu{
+    background-color:rgb(193, 224, 226);
+    margin-top: 5px;
+  }
+  
+  
+
+
+
 /* footer */
 
 footer{
@@ -117,6 +152,108 @@ footer{
     justify-content: center;
     align-items: center;
 }
+
+
+.top {
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: .3s;
+    color: #00A6C4;
+    background: #fff;
+    
+  /*   デフォルトは非表示 */
+    opacity: 1;
+  }
+  
+  .top:hover {
+      box-shadow: 0 0 10px #00A6C4;
+  }
+
+
+  /* モーダルウィンドウ */
+
+  
+  .button {
+    background: rgb(200, 110, 62);
+    color: #fff;
+    padding: 0 2em;
+    border: 0;
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 5px;
+    font-weight: 900;
+    position: relative;
+    font-family: serif;
+  }
+
+  
+  .button:hover {
+    background: lightcoral;
+    cursor: pointer;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+  }
+  
+  .modal-content {
+    background-color: #f4f4f4;
+    margin: 20% auto;
+    width: 50%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+  }
+  
+  @keyframes modalopen {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+  
+  .modal-header h1 {
+    margin: 1rem 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .modal-header {
+    background: rgb(196, 239, 186);
+    padding: 3px 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .modalClose {
+    font-size: 2rem;
+  }
+  
+  .modalClose:hover {
+    cursor: pointer;
+  }
+  
+  .modal-body {
+    padding: 10px 20px;
+    color: black;
+  }
+  
+
 
 @media screen and (max-width:780px){
 
