@@ -1,0 +1,189 @@
+
+/* 共通パーツ */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    background-color: #f9f3e6;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    opacity: .7;
+}
+
+.inner{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+header,footer{
+    background-color: rgb(189, 65, 20);
+    height: 50px;
+    padding-top: 10px;
+}
+
+/* header */
+
+#header_inner{
+ display: flex; 
+ justify-content: space-between;  
+}
+
+.site_title{
+    font-size: 20px;
+}
+
+header a{
+    color: #fff;
+}
+
+/* fv */
+
+.fv{
+    text-align: center;
+    position: relative;
+}
+
+.fv img{
+    width: 60%;
+    max-height: 300px;
+    border-radius: 5px;
+    margin: 40px;
+    object-fit: cover;
+}
+
+#cloud1{
+    position: absolute;
+    width: 150px;
+    top: 0;
+    left: -50px;
+}
+
+#cloud2{
+    position: absolute;
+    width: 200px;
+    top: 150px;
+}
+
+#cloud3{
+    position: absolute;
+    width: 150px;
+    top: 600px;
+    left: 100px;
+}
+
+/* 回転するアニメーション */
+@keyframes fuwafuwa1 {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* このクラスをつけると回転を無限に繰り返します */
+  .anime-fuwafuwa1 {
+    animation: 3s fuwafuwa1 infinite;
+  }
+
+  /* 回転するアニメーション */
+@keyframes fuwafuwa2 {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+  }
+  
+  /* このクラスをつけると回転を無限に繰り返します */
+  .anime-fuwafuwa2 {
+    animation: 4s fuwafuwa2 infinite;
+  }
+
+  @keyframes fuwafuwa3 {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* このクラスをつけると回転を無限に繰り返します */
+  .anime-fuwafuwa3 {
+    animation: 5s fuwafuwa1 infinite;
+    animation-delay: 2s;
+  }
+
+
+
+/* profile */
+
+.profile{
+    background-color: #fff;
+    border:rgb(17, 50, 168) 3px solid;
+    width: 70%;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.section_title{
+    font-size: 20px;
+    padding: 10px;
+}
+
+.shiitake{
+    font-weight: bold;
+    color: #5c3b0a;
+}
+
+/* button */
+
+.button{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+}
+
+.btn{
+        background-color: #fff;
+        text-align: center;
+}
+
+.btn a{
+    color: #000;
+}
+
+
+
+/* footer */
+
+footer{
+    text-align: center;
+    color: #fff;
+}
+
+
+@media screen and (max-width:780px){
+
+    .pc_only,br{
+        display: none;
+    }
+    
+}

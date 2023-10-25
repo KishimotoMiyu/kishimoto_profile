@@ -1,0 +1,159 @@
+/* 共通パーツ */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    background-color:#f9f3e6;
+    padding: 20px;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:#fff;
+}
+
+a:hover{
+    opacity: .7;
+}
+
+.inner{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+header,footer{
+    background-color: rgb(189, 65, 20);
+    height: 50px;
+    padding-top: 10px;
+}
+
+#hobby,#ranking{
+    background-color: #fff;
+    max-width: 1000px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.section_title{
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* header */
+
+.header_inner{
+    display: flex;
+    justify-content:space-between;
+}
+
+.site_title{
+    font-size: 20px;
+}
+
+header ul{
+    display: flex;
+
+}
+
+header li{
+    margin-left: 30px;
+    font-size: 16px;
+}
+
+/* hobby */
+
+#hobby{
+    margin-bottom: 30px;
+    border:rgb(11, 113, 16) 5px dotted;
+}
+
+.hobby_list{
+    display: flex;
+    justify-content: space-between;
+    padding-left:0;
+}
+
+.hobby_list li{
+    width: 33%;
+    background-color: gainsboro;
+    padding: 10px;
+}
+
+.hobby_title{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hobby_list p{
+    font-size: 16px;
+}
+
+.hobby_list img{
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+#ranking{
+    border:rgb(193, 134, 32) 5px dotted;
+}
+
+/* footer */
+
+footer{
+    text-align: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:780px){
+
+    .site_title{
+        font-size: 16px;
+    }
+
+    main{
+        padding-top: 100px;
+    }
+
+    header{
+        padding-top: 15px;
+        position:fixed;
+        top: 0;
+        width: 100vw;
+    }
+
+    header nav ul li{
+        font-size: 13px;
+        margin-left: 10px;
+    }
+
+    .hobby_list{
+        flex-direction: column;
+    }
+
+    .hobby_list li{
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 20px;
+    }
+
+    .pc_only{
+        display: none;
+    }
+    
+}
+
+
