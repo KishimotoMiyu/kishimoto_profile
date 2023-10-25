@@ -166,8 +166,7 @@
     </div>
 </main>
 
-<div class="top">top</div>
- 
+<button type="button" id="btn">TOPへ戻る</button>
     <footer>
         <p>
             <small>
@@ -249,6 +248,14 @@
                 modal3.style.display = 'none';
             }
         }
+
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", () => {
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+        });
+        });
 
 
         

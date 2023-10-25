@@ -149,6 +149,22 @@ footer{
     align-items: center;
 }
 
+/* TOPボタン */
+#btn{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    cursor:pointer;
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+  }
+
+  /* #btn.is-scrollEnd{
+    opacity: 1;
+  } */
+
+
 
   /* モーダルウィンドウ */
 
