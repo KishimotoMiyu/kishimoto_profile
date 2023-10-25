@@ -180,30 +180,6 @@ footer{
 }
 
 
-#top {
-  cursor: pointer;
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  transition: .3s;
-  color: #2c270b;
-  background: #fff;
-  
-/*   デフォルトは非表示 */
-  opacity: 1;
-}
-
-#top:hover {
-    box-shadow: 0 0 10px #fcab7c;
-}
-
-
 @media screen and (max-width:780px){
 
     .pc_only,br{
