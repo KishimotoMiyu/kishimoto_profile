@@ -51,17 +51,58 @@
             <li>
                 <img src="../img/hobby1.jpg" alt="game">
                 <h3 class="hobby_title">ゲーム</h3>
-                <p>好きなゲームはゼルダの伝説と牧場物語。どちらも64時代から好き。全シリーズプレイしたわけではないが、今も最新作はチェックしている</p>
+                <button id="modalOpen1" class="button">
+                    詳しく見る
+                </button>
+                <div id="easyModal1" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1>好きなゲームについて</h1>
+                            <span class="modalClose1">×</span>
+                        </div>
+                        <div class="modal-body">
+                            <p>好きなゲームはゼルダの伝説と牧場物語。どちらも64時代から好き。全シリーズプレイしたわけではないが、今も最新作はチェックしている。</p>
+                        </div>
+                     </div>
+                </div>
             </li>
             <li>
                 <img src="../img/hobby2.jpg" alt="travel">
                 <h3 class="hobby_title">旅行</h3>
-                <p>頻度は多くないが、海外旅行が好きで特にラスベガスは過去４回訪れており、一番好きな街。</p>
+                <button id="modalOpen2" class="button">
+                    詳しく見る
+                </button>
+                <div id="easyModal2" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1>旅行について</h1>
+                            <span class="modalClose2">×</span>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                アメリカ（ハワイ・グアム・本土）、韓国、フィリピン、インドネシアに行ったことがある。頻度は多くないが、海外旅行が好きで特にラスベガスは過去４回訪れており、一番好きな街。
+                            </p>
+                        </div>
+                     </div>
+                </div>
             </li>
             <li>
                 <img src="../img/hobby3.jpg" alt="books">
                 <h3 class="hobby_title">読書</h3>
-                <p>難しい本ではなく、読みやすい類の本を読むことが多い。</p>
+                <button id="modalOpen3" class="button">
+                    詳しく見る
+                </button>
+                <div id="easyModal3" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1>読書について</h1>
+                            <span class="modalClose3">×</span>
+                        </div>
+                        <div class="modal-body">
+                            <p>難しい本ではなく、読みやすい類の小説や暮らしに関するアイディアが記載されているような本を読むことが多い。</p>
+                        </div>
+                     </div>
+                </div>
             </li>
         </ul>
     </div>
@@ -101,9 +142,31 @@
               </tbody>
           </table>
     </div>
+
+    <div id="dog" class="inner">
+        <h2 class="section_title">
+            実家にいる犬について
+        </h2>
+        <section>
+            <div class="accordion">
+                <section>
+                    <p class="menu js-menu title">Q 犬の名前は？</p>
+                    <div class="contents">ぽんた</div>
+                </section>
+                <section>
+                    <p class="menu js-menu title">Q 犬種は？</p>
+                    <div class="contents">ポメラニアン</div>
+                
+                    
+              <p class="menu js-menu title">Q 誕生日は？</p>
+              <div class="contents">2019年4月25日</div>
+            </div>
+          </section>
+
+    </div>
 </main>
 
-
+<div class="top">top</div>
  
     <footer>
         <p>
@@ -114,6 +177,82 @@
 
     </footer>
 
-    
-</body>
+    <script src="../"></script>
+
+    <script>
+          
+      const menu = document.querySelectorAll(".js-menu");
+
+        function toggle() {
+        const content = this.nextElementSibling;
+        this.classList.toggle("is-active");
+        content.classList.toggle("is-open");
+        }
+
+        for (let i = 0; i < menu.length; i++) {
+        menu[i].addEventListener("click", toggle);
+        }
+
+
+            // モーダルウィンドウ
+            const buttonOpen1 = document.getElementById('modalOpen1');
+            const modal1 = document.getElementById('easyModal1');
+            const buttonOpen2 = document.getElementById('modalOpen2');
+            const modal2 = document.getElementById('easyModal2');
+            const buttonOpen3 = document.getElementById('modalOpen3');
+            const modal3 = document.getElementById('easyModal3');
+            const buttonClose1 = document.getElementsByClassName('modalClose1')[0];
+            const buttonClose2 = document.getElementsByClassName('modalClose2')[0];
+            const buttonClose3 = document.getElementsByClassName('modalClose3')[0];
+
+            // ボタンがクリックされた時
+            buttonOpen1.addEventListener('click', modalOpen1);
+            function modalOpen1() {
+            modal1.style.display = 'block';
+            }
+
+            buttonOpen2.addEventListener('click', modalOpen2);
+            function modalOpen2() {
+            modal2.style.display = 'block';
+            }
+
+            buttonOpen3.addEventListener('click', modalOpen3);
+            function modalOpen3() {
+            modal3.style.display = 'block';
+            }
+
+            // バツ印がクリックされた時
+            buttonClose1.addEventListener('click', modalClose1);
+            function modalClose1() {
+            modal1.style.display = 'none';
+           
+            }
+            buttonClose2.addEventListener('click', modalClose2);
+            function modalClose2() {
+            modal2.style.display = 'none';
+           
+            }
+            buttonClose3.addEventListener('click', modalClose3);
+            function modalClose3() {
+            modal3.style.display = 'none';
+           
+            }
+
+            // モーダルコンテンツ以外がクリックされた時
+            addEventListener('click', outsideClose);
+            function outsideClose(e) {
+            if (e.target == modal1) {
+                modal1.style.display = 'none';
+            } else if(e.target == modal2){
+                modal2.style.display = 'none';
+            } else if(e.target == modal3){
+                modal3.style.display = 'none';
+            }
+        }
+
+
+        
+
+        </script>
+    </body>
 </html>
